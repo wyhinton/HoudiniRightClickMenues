@@ -1,7 +1,7 @@
 {
     "env": [
         {
-            "WEBB_HOU": "C:\Users\Primary User\Desktop\LabsInstall\WebbLib"
+            "WEBB_HOU": "<PATH_TO_YOUR_PACKAGE_FOLDER>"
         },
     ],
     "path": "$WEBB_HOU"
