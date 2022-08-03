@@ -22,7 +22,7 @@ I then added the following WebbLib.json to my houdini packages folder - C:\Users
 }
 ```
 
-Here's the xml for my menu, which appears when right-clicking a parameter.
+Here's the xml for my PARMMenu.xml:
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <menuDocument>
