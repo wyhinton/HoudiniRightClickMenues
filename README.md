@@ -1,7 +1,7 @@
 # Custom Houdini Right Click Menues
 I use a good number of installed packages, and I've always wondered how the custom right click menu's for the packages worked. After some amount of trial and error, I was able to figure out how add my own menus. 
 
-First I created my own package WebbLib. I duplicated a package I alredy installed, [BeeHou](https://github.com/simonreeves/BeeHou), and renamed it to WebbLib. I deleted everything but the ```scripts``` and ```PARMMenu.xml``` leaving me with the following file structure:
+First I created my own package WebbLib. I created a ```scripts``` folder and ```PARMMenu.xml``` file: 
 
 ```
 - WebbLib
@@ -10,6 +10,7 @@ First I created my own package WebbLib. I duplicated a package I alredy installe
 ```
 
 I added the following WebbLib.json to my houdini packages folder:
+
 ```js
 {
     "env": [
@@ -20,9 +21,8 @@ I added the following WebbLib.json to my houdini packages folder:
     "path": "$WEBB_HOU"
 }
 ```
+
 Here's the xml for my menu, which appears when right-clicking a parameter.
-
-
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <menuDocument>
@@ -40,7 +40,7 @@ print("hello")
 	</menu>
 </menuDocument>
 ```
-And here it is!
+And here's our menu it is!
 ![image](https://user-images.githubusercontent.com/38958118/182684039-89bf141e-2afd-4a40-97e3-bd1199f7a248.png)
 
 
