@@ -1,3 +1,4 @@
+# Custom Houdini Right Click Menues
 I use a good number of installed packages, and I've always wondered how the custom right click menu's for the packages worked. After some amount of trial and error, I was able to figure out how add my own menues. 
 
 First I created my own package WebbLib. I duplicated a package I alredy installed, [BeeHou](https://github.com/simonreeves/BeeHou), and renamed it to WebbLib. I deleted everything but the ```scripts``` and ```PARMMenu.xml``` leaving me with the following file structure:
