@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<menuDocument>
+	<menu>
+    <subMenu id="Webb">
+      <label>Webb</label>
+      <insertBefore />
+      <scriptItem id="Say Hello">
+        <label>Say Hello</label>
+        <scriptCode><![CDATA[
+import webb.say_hello
+webb.say_hello.main(kwargs)
+      ]]></scriptCode>
+      </scriptItem>
+    </subMenu>
+	</menu>
+</menuDocument>
