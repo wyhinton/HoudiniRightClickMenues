@@ -20,7 +20,7 @@ I added the following WebbLib.json to my houdini packages folder:
     "path": "$WEBB_HOU"
 }
 ```
-Great, now my menu was showing up. It's pretty painfult to write actual python in the menue's XML file, so looks like a better practice is to write your code in the packages script folder, then import it into the menu. We can pass kwargs into these functions. 
+Here's the xml for my menu, which appears when right-clicking a parameter.
 
 
 ```xml
@@ -33,15 +33,34 @@ Great, now my menu was showing up. It's pretty painfult to write actual python i
       <scriptItem id="Say Hello">
         <label>set Optype Python</label>
         <scriptCode><![CDATA[
-        print("hello")
+print("hello")
       ]]></scriptCode>
       </scriptItem>
     </subMenu>
 	</menu>
 </menuDocument>
 ```
+And here it is!
 ![image](https://user-images.githubusercontent.com/38958118/182684039-89bf141e-2afd-4a40-97e3-bd1199f7a248.png)
 
+
+It's pretty painfult to write actual python in the menue's XML file, so looks like a better practice is to write your code in the packages script folder, then import it into the menu. We can pass kwargs into these functions. 
+```
+- WebbLib
+ - scripts
+   - webb
+    - say_hello.py
+ - PARMMenu.xml
+```
+
+```
+#say_hello.py
+def main(kwargs):
+    print(kwargs)
+    print("hello")
+```
+
+Then we import our ```say_hello``` script:
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <menuDocument>
@@ -50,13 +69,18 @@ Great, now my menu was showing up. It's pretty painfult to write actual python i
       <label>Webb</label>
       <insertBefore />
       <scriptItem id="Say Hello">
-        <label>set Optype Python</label>
+        <label>Say Hello</label>
         <scriptCode><![CDATA[
-			import webb.say_hello
-			webb.say_hello(kwargs)
+import webb.say_hello
+webb.say_hello.main(kwargs)
       ]]></scriptCode>
       </scriptItem>
     </subMenu>
 	</menu>
 </menuDocument>
 ```
+Here's the output:
+![image](https://user-images.githubusercontent.com/38958118/182685175-e4333ac9-1447-4c44-b1c8-5c1fd2cd8a80.png)
+
+
+
