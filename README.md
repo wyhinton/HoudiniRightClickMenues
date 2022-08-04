@@ -85,6 +85,8 @@ webb.say_hello.main(kwargs)
 Here's the output:
 ![image](https://user-images.githubusercontent.com/38958118/182685175-e4333ac9-1447-4c44-b1c8-5c1fd2cd8a80.png)
 
+Unfortunatley, as of 19.5 the only way to refresh our menue is to restart Houdini. So I'll usually do as much of the python development in a "dummy" shelf tool as possible, then plug it into my right click menu. 
+
 I've included the code to reproduce this in the repo. 
 
 
