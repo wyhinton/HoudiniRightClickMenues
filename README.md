@@ -31,7 +31,7 @@ Here's the xml for my PARMMenu.xml:
       <label>Webb</label>
       <insertBefore />
       <scriptItem id="Say Hello">
-        <label>set Optype Python</label>
+        <label>Say Hello</label>
         <scriptCode><![CDATA[
 print("hello")
       ]]></scriptCode>
